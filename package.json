@@ -1,0 +1,42 @@
+{
+  "name": "leetcode-typescript",
+  "version": "1.0.0",
+  "description": "My daily LeetCode challenge solutions in TypeScript",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "husky",
+    "test": "jest"
+  },
+  "keywords": [
+    "leetcode",
+    "typescript"
+  ],
+  "author": "KingMario",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "husky": "^9.0.11",
+    "import": "^0.0.6",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^4.5.4",
+    "typescript-eslint": "^7.1.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

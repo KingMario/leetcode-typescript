@@ -20,7 +20,11 @@ npm install
 
 Jest, a JavaScript Testing Framework, is utilized in this project due to its simplicity and out-of-the-box compatibility with TypeScript, the primary language used in this project.
 
-Each problem is accompanied by a set of test cases. These test cases are a mix of those directly derived from the problem and custom ones designed to handle edge cases, ensuring a thorough testing of the solution. The test file shares the same name as the problem file, appended with a `test-cases` suffix. It exports an array of test cases, where each case is an object comprising `input` and `expected` fields. These fields represent the function's input and the anticipated output, respectively.
+Each problem is accompanied by a set of test cases. These test cases are a mix of those directly derived from the problem and custom ones designed to handle edge cases, ensuring a thorough testing of the solution. The test file shares the same name as the problem file, appended with a `spec` suffix. It defines an array of test cases, where each case is an object comprising `input` and `expected` fields. These fields represent the function's input and the anticipated output, respectively.
+
+The function `runTestSuite` is designed to streamline the creation of test suites, and is frequently utilized in this context. It takes a `TestSuite` object as an argument. It uses the `describe` and `it` functions to create test cases for the provided solutions and test cases. The function executes each solution using the associated test case inputs, then verifies whether the output aligns with the anticipated result. This is achieved by employing the `expect` function in conjunction with the `toEqual` matcher.
+
+In certain scenarios or for specific solutions, the use of specialized equality testers may be necessary. For additional information, please consult the [expect.addEqualityTesters](https://jestjs.io/docs/expect#expectaddequalitytesterstesters) section in the Jest documentation.
 
 You can run the test cases using the following command:
 

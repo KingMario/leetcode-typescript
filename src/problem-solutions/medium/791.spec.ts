@@ -1,3 +1,4 @@
+import { expect } from "@jest/globals";
 import { TestCase, runTestSuite } from "../leetCodeTestUtility";
 import { solutions } from "./791";
 
@@ -10,7 +11,7 @@ export const testCases: TestCase<Solution>[] = [
   },
   {
     input: ["cba", "abcd"],
-    expected: "cbad",
+    expected: "cba,d",
   },
   {
     input: ["vle", "level"],
@@ -18,11 +19,11 @@ export const testCases: TestCase<Solution>[] = [
   },
   {
     input: ["ignore", "reorganization"],
-    expected: "iignnoorreazat",
+    expected: "iignnoorre,azat",
   },
   {
     input: ["fun", "funfair"],
-    expected: "ffunair",
+    expected: "ffun,air",
   },
 ];
 
@@ -31,5 +32,16 @@ const suiteName = [
   "customSortString",
 ].join(" - ");
 const caseName = "should return the intersection of two arrays";
+
+expect.addEqualityTesters([
+  (a: string, b: string) => {
+    if (a === b) {
+      return true;
+    }
+
+    const parts = b.split(",");
+    return a === parts.join("") || a === parts.reverse().join("");
+  },
+]);
 
 runTestSuite<Solution>({ suiteName, caseName, solutions, testCases });

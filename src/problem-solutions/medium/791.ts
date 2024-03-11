@@ -39,4 +39,11 @@ function customSortStringV2(order: string, s: string): string {
   return result + unsorted;
 }
 
-export const solutions = [customSortString, customSortStringV2];
+function customSortStringV3(order: string, s: string): string {
+  return s
+    .split("")
+    .sort((a, b) => order.indexOf(a) - order.indexOf(b))
+    .join("");
+}
+
+export const solutions = [customSortString, customSortStringV2, customSortStringV3];

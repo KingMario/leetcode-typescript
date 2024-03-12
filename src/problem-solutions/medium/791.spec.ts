@@ -31,7 +31,7 @@ const suiteName = [
   "https://leetcode.com/problems/custom-sort-string",
   "customSortString",
 ].join(" - ");
-const caseName = "should return the intersection of two arrays";
+const caseName = "should custom sort the string";
 
 expect.addEqualityTesters([
   (a: string, b: string) => {

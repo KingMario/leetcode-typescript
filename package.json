@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint .",
     "prepare": "husky",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
   "keywords": [

@@ -7,27 +7,31 @@ type Solution = (typeof solutions)[0];
 export const testCases: TestCase<Solution>[] = [
   {
     input: [[1, 2, -3, 3, 1]],
-    expected: [3, 1],
+    expected: [
+      [1, 2, 1],
+      [3, 1],
+    ],
   },
   {
     input: [[1, 2, 3, -3, 4]],
-    expected: [1, 2, 4],
+    expected: [[1, 2, 4]],
   },
   {
     input: [[1, 2, 3, -3, -2]],
-    expected: [1],
+    expected: [[1]],
   },
   {
     input: [[1, -1]],
-    expected: [],
+    expected: [[]],
   },
   {
     input: [[1, 3, 2, -3, -2, 5, 5, -5, 1]],
-    expected: [1, 5, 1],
+    expected: [[1, 5, 1]],
   },
 ].map(({ input: [head], expected }) => ({
   input: [arrayToListNode(head)],
-  expected: arrayToListNode(expected),
+  expected: expected.map(arrayToListNode),
+  containing: true,
 }));
 
 const suiteName = [

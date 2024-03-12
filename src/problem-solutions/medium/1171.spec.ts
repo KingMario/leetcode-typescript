@@ -28,6 +28,10 @@ export const testCases: TestCase<Solution>[] = [
     input: [[1, 3, 2, -3, -2, 5, 5, -5, 1]],
     expected: [[1, 5, 1]],
   },
+  {
+    input: [[]],
+    expected: [[]],
+  },
 ].map(({ input: [head], expected }) => ({
   input: [arrayToListNode(head)],
   expected: expected.map(arrayToListNode),

@@ -9,7 +9,8 @@ function removeZeroSumSublists(head: ListNode | null): ListNode | null {
     return head;
   }
 
-  const newHead = new ListNode(0, head);
+  const newHead = new ListNode(undefined, head);
+
   const map = new Map<number, ListNode>();
 
   map.set(0, newHead);

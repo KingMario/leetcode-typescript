@@ -19,14 +19,11 @@ function productExceptSelfV2(nums: number[]): number[] {
   let left = 1;
   let right = 1;
 
-  console.log({ nums });
-
   for (let i = 0; i < nums.length; i++) {
     left *= nums[i - 1] ?? 1;
     right *= nums[nums.length - i] ?? 1;
     result[i] *= left;
     result[nums.length - i - 1] *= right;
-    console.log({ i, left, right, result });
   }
 
   return result;

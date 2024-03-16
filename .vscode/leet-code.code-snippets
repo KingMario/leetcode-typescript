@@ -1,0 +1,39 @@
+{
+  "solution": {
+    "scope": "typescript",
+    "prefix": "lc-solution",
+    "body": [
+      "function ${functionName}(${para}: ${para1Type:number[]}): ${returnTYpe:number} {",
+      "  $0",
+      "  return 0;",
+      "}",
+      "",
+      "export const solutions = [$functionName];"
+    ],
+    "description": "leetcode solution"
+  },
+  "spec": {
+    "scope": "typescript",
+    "prefix": "lc-spec",
+    "body": [
+      "import { TestCase, runTestSuite } from \"../leetCodeTestUtility\";",
+      "import { solutions } from \"./${fileName}\";",
+      "",
+      "type Solution = (typeof solutions)[0];",
+      "",
+      "export const testCases: TestCase<Solution>[] = [",
+      "  $0",
+      "];",
+      "",
+      "const suiteName = [",
+      "    \"${url}\",",
+      "    \"${suiteName}\",",
+      "  ].join(\" - \");",
+      "const caseName = \"should ${work}\";",
+      "",
+      "runTestSuite<Solution>({ suiteName, caseName, solutions, testCases});",
+      ""
+    ],
+    "description": "leetcode test spec"
+  }
+}

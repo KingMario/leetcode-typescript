@@ -1,0 +1,4 @@
+{
+  "livePreview.defaultPreviewPath": "coverage/lcov-report/",
+  "livePreview.openPreviewTarget": "External Browser"
+}

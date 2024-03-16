@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "oderwat.indent-rainbow",
+    "mike-co.import-sorter",
+    "ms-vscode.live-server"
+  ]
+}

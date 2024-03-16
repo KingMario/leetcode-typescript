@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "test",
+      "type": "npm",
+      "script": "test",
+      "path": ""
+    },
+    {
+      "label": "lint",
+      "type": "npm",
+      "script": "lint",
+      "path": ""
+    },
+    {
+      "label": "test:watch",
+      "type": "npm",
+      "script": "test:watch",
+      "path": ""
+    }
+  ]
+}

@@ -32,6 +32,67 @@ You can run the test cases using the following command:
 npm test
 ```
 
+or
+
+```bash
+npm run test:watch
+```
+
+The second command will continuously monitor your code for changes as you work.
+
+## Shortcuts for VS Code
+
+### Tasks
+
+Tasks are configured for testing and linting. You can use the `Run Task...` command found under the Terminal menu in VS Code.
+
+### Snippets
+
+Custom snippets are configured for TypeScript.
+
+You can use the `lc-solution` snippet to quickly scaffold a new solution file. Here's how to use it:
+
+1. Open a new TypeScript file.
+2. Type `lc-solution` and press the `tab` key.
+3. The snippet will automatically expand and provide a basic structure for your solution.
+
+Here's what the `lc-solution` snippet looks like:
+
+```ts
+function functionName(para: number[]): number {
+  
+  return 0;
+}
+
+export const solutions = [functionName];
+```
+
+You can quickly scaffold a new spec file using the `lc-spec` snippet. Here's how to use it:
+1. Open a new TypeScript file.
+2. Type `lc-spec` and press the `tab` key.
+3. The snippet will automatically expand and provide a basic structure for your spec file.
+
+Here's what the `lc-spec` snippet looks like:
+
+```ts
+import { TestCase, runTestSuite } from "../leetCodeTestUtility";
+import { solutions } from "./fileName";
+
+type Solution = (typeof solutions)[0];
+
+export const testCases: TestCase<Solution>[] = [
+  
+];
+
+const suiteName = [
+    "url",
+    "suiteName",
+  ].join(" - ");
+const caseName = "should work";
+
+runTestSuite<Solution>({ suiteName, caseName, solutions, testCases});
+```
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

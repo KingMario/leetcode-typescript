@@ -19,7 +19,7 @@ const suiteName = [
   "https://leetcode.com/problems/product-of-array-except-self",
   "productExceptSelf",
 ].join(" - ");
-const caseName = "should custom sort the string";
+const caseName = "should return product of array except self";
 
 expect.addEqualityTesters([
   (a: number[], b: number[]) => a.every((v, i) => v === b[i]),

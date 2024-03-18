@@ -1,5 +1,5 @@
 import { arrayToListNode } from "../../data-structure";
-import { TestCase, runTestSuite } from "../leetCodeTestUtility";
+import { runTestSuite, TestCase } from "../leetCodeTestUtility";
 import { solutions } from "./1171";
 
 type Solution = (typeof solutions)[0];

@@ -46,4 +46,8 @@ function customSortStringV3(order: string, s: string): string {
     .join("");
 }
 
-export const solutions = [customSortString, customSortStringV2, customSortStringV3];
+export const solutions = [
+  customSortString,
+  customSortStringV2,
+  customSortStringV3,
+];

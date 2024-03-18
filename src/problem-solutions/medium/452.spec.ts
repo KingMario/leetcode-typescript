@@ -1,4 +1,4 @@
-import { TestCase, runTestSuite } from "../leetCodeTestUtility";
+import { runTestSuite, TestCase } from "../leetCodeTestUtility";
 import { solutions } from "./452";
 
 type Solution = (typeof solutions)[0];

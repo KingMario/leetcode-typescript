@@ -1,6 +1,6 @@
 import {
-  ListNode,
   arrayToListNode,
+  ListNode,
   listNodeToArray,
 } from "../../data-structure";
 

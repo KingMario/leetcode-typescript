@@ -1,5 +1,6 @@
 import { expect } from "@jest/globals";
-import { TestCase, runTestSuite } from "../leetCodeTestUtility";
+
+import { runTestSuite, TestCase } from "../leetCodeTestUtility";
 import { solutions } from "./791";
 
 type Solution = (typeof solutions)[0];

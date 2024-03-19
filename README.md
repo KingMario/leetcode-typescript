@@ -55,6 +55,8 @@ You can use the `lc-solution` snippet to quickly scaffold a new solution file. H
 1. Open a new TypeScript file.
 2. Type `lc-solution` and press the `tab` key.
 3. The snippet will automatically expand and provide a basic structure for your solution.
+4. Use the `tab` key to navigate and edit the function and parameter names.
+5. After making the above changes, hit `tab` again to move to the first line of the function body.
 
 Here's what the `lc-solution` snippet looks like:
 
@@ -71,6 +73,8 @@ You can quickly scaffold a new spec file using the `lc-spec` snippet. Here's how
 1. Open a new TypeScript file.
 2. Type `lc-spec` and press the `tab` key.
 3. The snippet will automatically expand and provide a basic structure for your spec file.
+4. Use the `tab` key to navigate and edit placeholders such as module name, URL, suite name, and case name.
+5. After making the above changes, hit `tab` again to move to the first line of the testCases array.
 
 Here's what the `lc-spec` snippet looks like:
 

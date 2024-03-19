@@ -2,6 +2,16 @@
 
 This repository serves as a record of my daily progress in solving LeetCode challenges, all of which are implemented in TypeScript.
 
+This project also showcases the following best practices in front-end engineering, which are instrumental in creating maintainable and extensible code:
+
+* Utilizing the Jest testing framework for verifying algorithm correctness
+* Creating a unified test suite that supports TypeScript generics
+* Developing VS Code snippets to enhance coding efficiency
+* Leveraging VS Code plugins and commands to standardize code style and import order
+* Configuring VS Code tasks and Husky scripts to ensure the quality of committed code
+* Generating a code coverage report during testing
+* Setting up the Live Preview plugin in VS Code to host and instantly open the report for viewing
+
 ## Folder Structure
 
 The codebase is primarily split into two main directories: `data-structure` and `problem-solutions`, both of which are located within the `src` directory.

@@ -2,8 +2,9 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
-    "oderwat.indent-rainbow",
+    "github.vscode-github-actions",
     "mike-co.import-sorter",
-    "ms-vscode.live-server"
+    "ms-vscode.live-server",
+    "oderwat.indent-rainbow"
   ]
 }

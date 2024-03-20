@@ -35,5 +35,16 @@
       ""
     ],
     "description": "leetcode test spec"
+  },
+  "test-case": {
+    "scope": "typescript",
+    "prefix": "lc-test-case",
+    "body": [
+      "{",
+      "  input: [${input}],",
+      "  expected: ${expected},",
+      "},"
+    ],
+    "description": "leetcode test case"
   }
 }

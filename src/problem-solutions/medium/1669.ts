@@ -1,4 +1,8 @@
-import { arrayToListNode, ListNode, listNodeToArray } from '../../data-structure';
+import {
+  arrayToListNode,
+  ListNode,
+  listNodeToArray,
+} from "../../data-structure";
 
 function mergeInBetween(
   list1: ListNode | null,

@@ -7,5 +7,6 @@
   "importSorter.importStringConfiguration.trailingComma": "always",
   "livePreview.defaultPreviewPath": "coverage/lcov-report/",
   "livePreview.openPreviewTarget": "External Browser",
+  "scm.defaultViewMode": "tree",
   "typescript.preferences.preferTypeOnlyAutoImports": true
 }

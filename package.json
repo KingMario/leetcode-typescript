@@ -15,6 +15,14 @@
   ],
   "author": "KingMario",
   "license": "MIT",
+  "homepage": "https://github.com/KingMario/leetcode-typescript#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingMario/leetcode-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KingMario/leetcode-typescript/issues"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "eslint": "^8.57.0",

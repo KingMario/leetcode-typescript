@@ -1,4 +1,5 @@
 {
   "livePreview.defaultPreviewPath": "coverage/lcov-report/",
-  "livePreview.openPreviewTarget": "External Browser"
+  "livePreview.openPreviewTarget": "External Browser",
+  "importSorter.importStringConfiguration.quoteMark": "double"
 }

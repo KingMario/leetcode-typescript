@@ -1,5 +1,11 @@
 {
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 0,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "words",
+  "importSorter.importStringConfiguration.quoteMark": "double",
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "importSorter.importStringConfiguration.trailingComma": "always",
   "livePreview.defaultPreviewPath": "coverage/lcov-report/",
   "livePreview.openPreviewTarget": "External Browser",
-  "importSorter.importStringConfiguration.quoteMark": "double"
+  "typescript.preferences.preferTypeOnlyAutoImports": true
 }

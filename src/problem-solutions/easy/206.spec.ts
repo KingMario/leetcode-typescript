@@ -1,6 +1,13 @@
-import { arrayToListNode } from "../../data-structure";
-import { runTestSuite, TestCase } from "../leetCodeTestUtility";
-import { solutions } from "./206";
+import {
+  arrayToListNode,
+} from "../../data-structure";
+import {
+  runTestSuite,
+  TestCase,
+} from "../leetCodeTestUtility";
+import {
+  solutions,
+} from "./206";
 
 type Solution = (typeof solutions)[0];
 

@@ -1,5 +1,10 @@
-import { runTestSuite, TestCase } from "../leetCodeTestUtility";
-import { solutions } from "./2540";
+import {
+  runTestSuite,
+  TestCase,
+} from "../leetCodeTestUtility";
+import {
+  solutions,
+} from "./2540";
 
 type Solution = (typeof solutions)[0];
 

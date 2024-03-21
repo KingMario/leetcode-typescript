@@ -1,7 +1,14 @@
-import { expect } from "@jest/globals";
+import {
+  expect,
+} from "@jest/globals";
 
-import { runTestSuite, TestCase } from "../leetCodeTestUtility";
-import { solutions } from "./791";
+import {
+  runTestSuite,
+  TestCase,
+} from "../leetCodeTestUtility";
+import {
+  solutions,
+} from "./791";
 
 type Solution = (typeof solutions)[0];
 

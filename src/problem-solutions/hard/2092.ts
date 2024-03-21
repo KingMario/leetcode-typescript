@@ -1,3 +1,7 @@
+import {
+  addValueToArrayInMap,
+} from "../../utilities";
+
 function findAllPeople(
   n: number,
   meetings: [number, number, number][],
@@ -8,12 +12,7 @@ function findAllPeople(
 
   meetings.sort(([, , time1], [, , time2]) => time1 - time2);
   for (const [x, y, time] of meetings) {
-    const list = meetingsByTime.get(time);
-    if (list) {
-      list.push([x, y]);
-    } else {
-      meetingsByTime.set(time, [[x, y]]);
-    }
+    addValueToArrayInMap(meetingsByTime, time, [x, y]);
   }
 
   for (const meetingsForThisTime of meetingsByTime.values()) {
@@ -24,18 +23,8 @@ function findAllPeople(
     const network = new Map<number, number[]>();
 
     for (const [x, y] of newNetworkMeetings) {
-      const xNetwork = network.get(x);
-      if (xNetwork) {
-        xNetwork.push(y);
-      } else {
-        network.set(x, [y]);
-      }
-      const yNetwork = network.get(y);
-      if (yNetwork) {
-        yNetwork.push(x);
-      } else {
-        network.set(y, [x]);
-      }
+      addValueToArrayInMap(network, x, y);
+      addValueToArrayInMap(network, y, x);
     }
 
     const spreadingMeetings = meetingsForThisTime.filter(

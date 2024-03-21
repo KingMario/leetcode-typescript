@@ -11,19 +11,18 @@ type Solution = (typeof solutions)[0];
 export const testCases: TestCase<Solution>[] = [
   {
     input: [
-      10,
+      8,
       [
         [1, 2, 5],
         [2, 3, 8],
-        [1, 5, 10],
-        [4, 2, 9],
-        [6, 7, 6],
-        [6, 9, 6],
-        [8, 7, 6],
+        [5, 1, 10],
+        [9, 5, 10],
+        [4, 6, 6],
+        [4, 7, 6],
       ],
       1,
     ],
-    expected: [0, 1, 2, 3, 4, 5],
+    expected: [0, 1, 2, 3, 5, 9],
   },
   {
     input: [

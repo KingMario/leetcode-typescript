@@ -1,8 +1,12 @@
+import {
+  incrementValueInMap,
+} from "../../utilities";
+
 function leastInterval(tasks: string[], n: number): number {
   const map = new Map<string, number>();
 
   for (const task of tasks) {
-    map.set(task, (map.get(task) || 0) + 1);
+    incrementValueInMap(map, task);
   }
 
   const sorted = [...map.entries()].sort((a, b) => b[1] - a[1]);

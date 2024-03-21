@@ -1,3 +1,7 @@
+import {
+  incrementValueInMap,
+} from "../../utilities";
+
 function maxPoints(points: number[][]): number {
   if (points.length === 1) {
     return 1;
@@ -12,7 +16,7 @@ function maxPoints(points: number[][]): number {
 
       const slope =
         (points[j][1] - points[i][1]) / (points[j][0] - points[i][0]);
-      count.set(slope, (count.get(slope) ?? 0) + 1);
+      incrementValueInMap(count, slope);
 
       result = Math.max(result, count.get(slope)! + 1);
     }

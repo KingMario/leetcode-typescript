@@ -1,3 +1,7 @@
+import {
+  incrementValueInMap,
+} from "../../utilities";
+
 function numSubarraysWithSum(nums: number[], goal: number): number {
   let count = 0;
 
@@ -24,7 +28,7 @@ function numSubarraysWithSumV2(nums: number[], goal: number): number {
   for (const num of nums) {
     sum += num;
     count += sumCount.get(sum - goal) || 0;
-    sumCount.set(sum, (sumCount.get(sum) || 0) + 1);
+    incrementValueInMap(sumCount, sum);
   }
 
   return count;

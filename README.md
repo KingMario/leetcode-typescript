@@ -11,12 +11,16 @@ This project also showcases the following best practices in front-end engineerin
 * Configuring VS Code tasks and Husky scripts to ensure the quality of committed code
 * Generating a code coverage report during testing
 * Setting up the Live Preview plugin in VS Code to host and instantly open the report for viewing
+* Striving for 100% code coverage in unit tests
+* Refactoring to achieve code readability, maintainability, and extensibility
 
 ## Folder Structure
 
-The codebase is primarily split into two main directories: `data-structure` and `problem-solutions`, both of which are located within the `src` directory.
+The codebase is primarily split into three main directories: `data-structure`, `utilities` and `problem-solutions`, all of which are located within the `src` directory.
 
 The `data-structure` directory houses a variety of data structures that are frequently used in problem solutions, including ListNode, Binary Tree, Max Heap, Min Heap, Priority Queue, and more. For some data structures, helper methods such as `arrayToList` and `ListToArray` are provided to aid in testing, aligning with the format of LeetCode's test cases. This directory is continuously updated and enhanced to meet the evolving needs of the problems.
+
+The `utilities` directory houses a variety of common utilities that are frequently used across different problem solutions. These utilities include functions and classes that perform common tasks or operations, such as sorting, searching, and data manipulation. This directory is continuously updated and enhanced to meet the evolving needs of the problems and to promote code reuse and maintainability.
 
 The `problem-solutions` directory is organized into three subdirectories: `easy`, `medium`, and `hard`. These subdirectories categorize the solutions to the daily problems based on their level of difficulty.
 
@@ -80,6 +84,7 @@ export const solutions = [functionName];
 ```
 
 You can quickly scaffold a new spec file using the `lc-spec` snippet. Here's how to use it:
+
 1. Open a new TypeScript file.
 2. Type `lc-spec` and press the `tab` key.
 3. The snippet will automatically expand and provide a basic structure for your spec file.

@@ -4,20 +4,40 @@
     {
       "label": "test",
       "type": "npm",
-      "script": "test",
-      "path": ""
+      "script": "test"
     },
     {
       "label": "lint",
       "type": "npm",
-      "script": "lint",
-      "path": ""
+      "script": "lint"
     },
     {
       "label": "test:watch",
       "type": "npm",
-      "script": "test:watch",
-      "path": ""
+      "script": "test:watch"
+    },
+    {
+      "label": "new-problem",
+      "type": "shell",
+      "command": "cd src/problem-solutions/${input:difficulty} && touch ${input:problemId}.ts && touch ${input:problemId}.spec.ts"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "difficulty",
+      "type": "pickString",
+      "description": "What's the difficulty of the problem?",
+      "options": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "easy"
+    },
+    {
+      "id": "problemId",
+      "type": "promptString",
+      "description": "What's the problem id?"
     }
   ]
 }

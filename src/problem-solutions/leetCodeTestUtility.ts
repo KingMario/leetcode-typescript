@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export interface TestCase<T extends (...args: any[]) => any> {
-  input: Parameters<T>;
+  input: (Parameters<T> | (() => Parameters<T>));
   expected: ReturnType<T> | ReturnType<T>[];
   containing?: boolean;
 }
@@ -24,6 +24,10 @@ export function runTestSuite<T extends (...args: any[]) => any>({
     it(caseName, () => {
       solutions.forEach((solution) => {
         testCases.forEach(({ input, expected, containing }) => {
+          if (typeof input === "function") {
+            input = input();
+          }
+
           if (containing) {
             expect(expected).toContainEqual(solution(...input));
           } else {

@@ -20,4 +20,30 @@ function trap(height: number[]): number {
   return result;
 }
 
-export const solutions = [trap];
+function trapV2(heights: number[]): number {
+  const { length } = heights;
+
+  let left = 0;
+  let right = length - 1;
+
+  let leftMax = 0;
+  let rightMax = 0;
+
+  let result = 0;
+
+  while (left < right) {
+    if (heights[ left ] < heights[ right ]) {
+      leftMax = Math.max(leftMax, heights[ left ]);
+      result += leftMax - heights[ left ];
+      left++;
+    } else {
+      rightMax = Math.max(rightMax, heights[ right ]);
+      result += rightMax - heights[ right ];
+      right--;
+    }
+  }
+
+  return result;
+}
+
+export const solutions = [trap, trapV2];

@@ -27,13 +27,18 @@ function isPalindromeV3(head: ListNode | null): boolean {
   let reversed: ListNode | null = null;
   let current = head;
 
+  let count = 0;
+
   while (current) {
     const next = current.next;
     reversed = new ListNode(current.val, reversed);
     current = next;
+    count++;
   }
 
-  while (reversed) {
+  count /= 2;
+
+  while (reversed && count--) {
     if (reversed.val !== head?.val) {
       return false;
     }

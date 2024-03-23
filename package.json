@@ -37,18 +37,8 @@
     "typescript-eslint": "^7.1.1"
   },
   "jest": {
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    },
-    "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   },
   "lint-staged": {
     "*.ts": "eslint"

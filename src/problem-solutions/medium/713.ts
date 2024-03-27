@@ -33,12 +33,12 @@ function numSubarrayProductLessThanKV2(nums: number[], k: number): number {
   while (right < length) {
     prod *= nums[right];
 
-    while (prod >= k) {
+    while (prod >= k && left <= right) {
       prod /= nums[left];
       left++;
     }
 
-    result += Math.max(right - left + 1, 0);
+    result += right - left + 1;
     right++;
   }
 

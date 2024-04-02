@@ -30,11 +30,8 @@ function isIsomorphicV2(s: string, t: string): boolean {
       incrementValueInMapAndReturnValue(sMap, s[i], value) !==
       incrementValueInMapAndReturnValue(tMap, t[i], value)
     ) {
-      console.log(sMap, tMap);
       return false;
     }
-
-    console.log(sMap, tMap);
   }
 
   return true;

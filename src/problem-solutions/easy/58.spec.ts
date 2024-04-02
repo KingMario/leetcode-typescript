@@ -27,6 +27,6 @@ const suiteName = [
   "https://leetcode.com/problems/length-of-last-word",
   "lengthOfLastWord",
 ].join(" - ");
-const caseName = "should work";
+const caseName = "should return the length of the last word in a string";
 
 runTestSuite<Solution>({ suiteName, caseName, solutions, testCases });

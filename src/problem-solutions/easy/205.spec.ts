@@ -21,6 +21,18 @@ export const testCases: TestCase<Solution>[] = [
     input: ["paper", "title"],
     expected: true,
   },
+  {
+    input: ["bbbaaaba", "aaabbbba"],
+    expected: false,
+  },
+  {
+    input: ["ab", "aa"],
+    expected: false,
+  },
+  {
+    input: ["abbaa", "cddcd"],
+    expected: false,
+  },
 ];
 
 const suiteName = [

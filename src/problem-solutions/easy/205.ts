@@ -1,6 +1,6 @@
 import {
-  addValueToArrayInMap,
   incrementValueInMapAndReturnValue,
+  pushElementToArrayInMap,
 } from "../../utilities";
 
 function isIsomorphic(s: string, t: string): boolean {
@@ -9,8 +9,8 @@ function isIsomorphic(s: string, t: string): boolean {
   const tMap = new Map<string, number[]>();
 
   for (let i = 0; i < length; i++) {
-    addValueToArrayInMap(sMap, s[i], i);
-    addValueToArrayInMap(tMap, t[i], i);
+    pushElementToArrayInMap(sMap, s[i], i);
+    pushElementToArrayInMap(tMap, t[i], i);
   }
 
   return (
@@ -25,12 +25,16 @@ function isIsomorphicV2(s: string, t: string): boolean {
   const tMap = new Map<string, number>();
 
   for (let i = 0; i < length; i++) {
+    const value = (i + 1) * (i + 1);
     if (
-      incrementValueInMapAndReturnValue(sMap, s[i]) !==
-      incrementValueInMapAndReturnValue(tMap, t[i])
+      incrementValueInMapAndReturnValue(sMap, s[i], value) !==
+      incrementValueInMapAndReturnValue(tMap, t[i], value)
     ) {
+      console.log(sMap, tMap);
       return false;
     }
+
+    console.log(sMap, tMap);
   }
 
   return true;

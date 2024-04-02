@@ -1,8 +1,8 @@
-export function addValueToArrayInMap<K, V>(map: Map<K, V[]>, key: K, value: V) {
-  addValueToArrayInMapAndReturnArray(map, key, value);
+export function pushElementToArrayInMap<K, V>(map: Map<K, V[]>, key: K, value: V) {
+  pushElementToArrayInMapAndReturnArray(map, key, value);
 }
 
-export function addValueToArrayInMapAndReturnArray<K, V>(
+export function pushElementToArrayInMapAndReturnArray<K, V>(
   map: Map<K, V[]>,
   key: K,
   value: V

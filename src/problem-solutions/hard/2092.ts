@@ -1,5 +1,5 @@
 import {
-  addValueToArrayInMap,
+  pushElementToArrayInMap,
 } from "../../utilities";
 
 function findAllPeople(
@@ -12,7 +12,7 @@ function findAllPeople(
 
   meetings.sort(([, , time1], [, , time2]) => time1 - time2);
   for (const [x, y, time] of meetings) {
-    addValueToArrayInMap(meetingsByTime, time, [x, y]);
+    pushElementToArrayInMap(meetingsByTime, time, [x, y]);
   }
 
   for (const meetingsForThisTime of meetingsByTime.values()) {
@@ -23,8 +23,8 @@ function findAllPeople(
     const network = new Map<number, number[]>();
 
     for (const [x, y] of newNetworkMeetings) {
-      addValueToArrayInMap(network, x, y);
-      addValueToArrayInMap(network, y, x);
+      pushElementToArrayInMap(network, x, y);
+      pushElementToArrayInMap(network, y, x);
     }
 
     const spreadingMeetings = meetingsForThisTime.filter(

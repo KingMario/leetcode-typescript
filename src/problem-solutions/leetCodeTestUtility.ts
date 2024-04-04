@@ -24,20 +24,31 @@ export function runTestSuite<T extends (...args: any[]) => any>({
   describe(suiteName, () => {
     it(caseName, () => {
       solutions.forEach((solution) => {
-        testCases.forEach(({ input, expected, containing, expectedMutatedInput }) => {
-          if (typeof input === "function") {
-            input = input();
-          }
+        testCases.forEach(
+          ({ input, expected, containing, expectedMutatedInput }, caseIndex) => {
+            try {
+              if (typeof input === "function") {
+                input = input();
+              }
 
-          if (containing) {
-            expect(expected).toContainEqual(solution(...input));
-          } else if (expectedMutatedInput) {
-            solution(...input);
-            expect(input).toEqual(expected);
-          } else {
-            expect(solution(...input)).toEqual(expected);
+              if (containing) {
+                expect(expected).toContainEqual(solution(...input));
+              } else if (expectedMutatedInput) {
+                solution(...input);
+                expect(input).toEqual(expected);
+              } else {
+                expect(solution(...input)).toEqual(expected);
+              }
+            } catch (error) {
+              console.debug({
+                solutionName: solution.name,
+                caseIndex,
+              });
+
+              throw error;
+            }
           }
-        });
+        );
       });
     });
   });

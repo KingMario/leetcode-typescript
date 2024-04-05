@@ -31,7 +31,10 @@ function strongPasswordChecker(password: string): number {
 
   const deleteCharsToBreakSequence = (charsToDelete: number) => {
     for (let i = 0; i < sequenceLengths.length; i++) {
-      if (excessChars === deletedCharsInSequences) {
+      if (
+        excessChars === deletedCharsInSequences ||
+        excessChars - charsToDelete < deletedCharsInSequences
+      ) {
         break;
       }
 
@@ -44,7 +47,10 @@ function strongPasswordChecker(password: string): number {
 
   const delete3CharsInSequences = () => {
     for (let i = 0; i < sequenceLengths.length; i++) {
-      while (excessChars - deletedCharsInSequences > 2 && sequenceLengths[i] > 2) {
+      while (
+        excessChars - deletedCharsInSequences > 2 &&
+        sequenceLengths[i] > 2
+      ) {
         deletedCharsInSequences += 3;
         sequenceLengths[i] -= 3;
       }

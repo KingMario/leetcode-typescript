@@ -61,6 +61,10 @@ export const testCases: TestCase<Solution>[] = [
     input: ["aaaaAAAAAA000000123456"],
     expected: 5,
   },
+  {
+    input: ["aaaaabbbbccccddddeeeeffffgggghhhh"],
+    expected: 15,
+  },
 ];
 
 const suiteName = [

@@ -22,6 +22,10 @@ export const testCases: TestCase<Solution>[] = [
     expected: 2,
   },
   {
+    input: ["!!!!"],
+    expected: 3,
+  },
+  {
     input: ["AAAAA"],
     expected: 2,
   },

@@ -6,11 +6,13 @@ function strongPasswordChecker(password: string): number {
   const { length: passwordLength } = password;
   const charsToAdd = minLength - passwordLength;
 
-  if (passwordLength < 4) {
+  const validationPatterns = [/\d/, /[a-z]/, /[A-Z]/];
+
+  if (passwordLength <= minLength - validationPatterns.length) {
     return charsToAdd;
   }
 
-  const unmetCharTypes = [/\d/, /[a-z]/, /[A-Z]/]
+  const unmetCharTypes = validationPatterns
     .map((pattern) => pattern.test(password))
     .filter((found) => !found).length;
   const sequenceLengths = (password.match(/(.)\1{2,}/g) ?? []).map(

@@ -1,10 +1,5 @@
-import {
-  runTestSuite,
-  TestCase,
-} from "../leetCodeTestUtility";
-import {
-  solutions,
-} from "./84";
+import { runTestSuite, TestCase } from "../leetCodeTestUtility";
+import { solutions } from "./84";
 
 type Solution = (typeof solutions)[0];
 
@@ -20,9 +15,10 @@ export const testCases: TestCase<Solution>[] = [
 ];
 
 const suiteName = [
-  "leetcode.com/problems/largest-rectangle-in-histogram",
+  "https://leetcode.com/problems/largest-rectangle-in-histogram",
   "largestRectangleArea",
 ].join(" - ");
-const caseName = "should return the area of the largest rectangle in the histogram";
+const caseName =
+  "should return the area of the largest rectangle in the histogram";
 
-runTestSuite<Solution>({ suiteName, caseName, solutions, testCases});
+runTestSuite<Solution>({ suiteName, caseName, solutions, testCases });
